@@ -1,0 +1,27 @@
+rails new myblog
+cd myblog
+bundle install
+rake db:create
+bundle install
+rake db:create
+mysql.server start
+rake db:create
+
+bundle install
+
+rails generate devise:install
+rails generate devise User
+rake db:migrate
+
+rails generate devise:views users
+rails g scaffold Article title:string description:string status:boolean user:references
+
+rake db:seed
+
+rake db:reset
+
+rails db:migrate
+rake db:seed
+
+rails g controller home index
+

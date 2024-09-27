@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: lms@1234
+  host: 127.0.0.1
+  port: 3306
+
+development:
+  <<: *default
+  database: rspec_sample
+
+test:
+  <<: *default
+  database: rspec_sample_test
+
+production:
+  <<: *default
+  database: rspec_sample_production
